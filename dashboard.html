@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone - Professional UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Exact Facebook Colors */
+        :root {
+            --fb-bg: #F0F2F5;
+            --fb-blue: #0866FF;
+            --fb-card: #FFFFFF;
+            --fb-hover: #E4E6E9;
+        }
+        body { background-color: var(--fb-bg); font-family: 'Segoe UI', Helvetica, Arial, sans-serif; }
+        .custom-scroll::-webkit-scrollbar { width: 8px; }
+        .custom-scroll:hover::-webkit-scrollbar-thumb { background: #bcc0c4; border-radius: 10px; }
+    </style>
+</head>
+<body class="text-[#1C1E21] overflow-hidden">
+
+    <header class="bg-white h-14 flex items-center justify-between px-4 sticky top-0 z-50 shadow-sm border-b border-gray-200">
+        <div class="flex items-center gap-2 min-w-[300px]">
+            <svg viewBox="0 0 36 36" class="fill-[#0866FF] w-10 h-10 cursor-pointer" fill="currentColor"><path d="M15 35.8C.8 34.8 0 24.7 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 6.7-.8 16.8-15 17.8V23h4.8l.8-5H21v-3.5c0-1.6.8-2.5 2.3-2.5H26V8h-3.8c-4.1 0-7.2 2.5-7.2 7v3h-3v5h3v12.8z"></path></svg>
+            <div class="hidden sm:flex items-center bg-[#F0F2F5] rounded-full px-3 py-2 w-64 group">
+                <i data-lucide="search" class="w-4 h-4 text-gray-500"></i>
+                <input type="text" placeholder="Search Facebook" class="bg-transparent border-none focus:ring-0 text-[15px] ml-2 outline-none w-full">
+            </div>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-1 h-full">
+            <div class="px-10 py-2 border-b-[3px] border-[#0866FF] text-[#0866FF] cursor-pointer flex items-center h-full">
+                <i data-lucide="home" class="w-7 h-7 fill-[#0866FF]"></i>
+            </div>
+           
+            <div class="px-10 py-2 hover:bg-gray-100 rounded-lg text-gray-600 cursor-pointer transition flex items-center h-full">
+               <a href="friend.html"> <i data-lucide="users-2" class="w-7 h-7"></i></a>
+            </div>
+            <div class="px-10 py-2 hover:bg-gray-100 rounded-lg text-gray-600 cursor-pointer transition flex items-center h-full relative">
+                <i data-lucide="tv-2" class="w-7 h-7"></i>
+                <span class="absolute top-2 right-8 bg-red-600 text-white text-[10px] px-1.5 rounded-full font-bold">9+</span>
+            </div>
+            <div class="px-10 py-2 hover:bg-gray-100 rounded-lg text-gray-600 cursor-pointer transition flex items-center h-full">
+                <i data-lucide="store" class="w-7 h-7"></i>
+            </div>
+            <div class="px-10 py-2 hover:bg-gray-100 rounded-lg text-gray-600 cursor-pointer transition flex items-center h-full">
+                <i data-lucide="layout-grid" class="w-7 h-7"></i>
+            </div>
+        </nav>
+
+        <div class="flex items-center gap-2 min-w-[300px] justify-end">
+            <div class="p-2 bg-[#E4E6E9] rounded-full hover:bg-gray-300 cursor-pointer"><i data-lucide="grid-3x3" class="w-5 h-5"></i></div>
+            <div class="p-2 bg-[#E4E6E9] rounded-full hover:bg-gray-300 cursor-pointer"><i data-lucide="message-circle" class="w-5 h-5"></i></div>
+            <div class="p-2 bg-[#E4E6E9] rounded-full hover:bg-gray-300 cursor-pointer relative">
+                <i data-lucide="bell" class="w-5 h-5"></i>
+                <span class="absolute -top-1 -right-1 bg-red-600 text-white text-[11px] px-1.5 rounded-full border-2 border-white font-bold">9</span>
+            </div>
+            <img src="https://ui-avatars.com/api/?name=Muzammil+Mukhtar&background=random" class="w-10 h-10 rounded-full cursor-pointer hover:opacity-90">
+        </div>
+    </header>
+
+    <div class="flex justify-between h-[calc(100vh-56px)]">
+        
+        <aside class="hidden xl:flex flex-col w-[360px] p-2 overflow-y-auto custom-scroll">
+            <div class="space-y-0.5">
+                <a href="#" class="flex items-center gap-3 p-2.5 hover:bg-[#E4E6E9] rounded-lg transition">
+                    <img src="https://ui-avatars.com/api/?name=Muzammil+Mukhtar&background=random" class="w-9 h-9 rounded-full border">
+                    <span class="font-semibold text-[15px]">Muzammil Mukhtar</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 p-2.5 hover:bg-[#E4E6E9] rounded-lg transition">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Meta_AI_logo.svg" class="w-9 h-9 p-1 rounded-full bg-gradient-to-tr from-blue-400 to-purple-500">
+                    <span class="font-semibold text-[15px]">Meta AI</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 p-2.5 hover:bg-[#E4E6E9] rounded-lg transition">
+                    <i data-lucide="users" class="text-blue-500 w-8 h-8"></i>
+                    <span class="font-semibold text-[15px]">Friends</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 p-2.5 hover:bg-[#E4E6E9] rounded-lg transition">
+                    <i data-lucide="history" class="text-blue-400 w-8 h-8"></i>
+                    <span class="font-semibold text-[15px]">Memories</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 p-2.5 hover:bg-[#E4E6E9] rounded-lg transition border-b pb-4 mb-4">
+                    <i data-lucide="chevron-down" class="bg-gray-200 rounded-full p-1.5 w-8 h-8"></i>
+                    <span class="font-semibold text-[15px]">See more</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-1 overflow-y-auto pt-5 flex flex-col items-center custom-scroll">
+            
+            <div class="flex gap-2 w-full max-w-[590px] mb-5">
+                <div class="w-[112px] h-[200px] bg-white rounded-xl shadow border border-gray-200 overflow-hidden group cursor-pointer">
+                    <div class="h-[150px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" class="h-full w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="relative h-[50px] flex flex-col items-center justify-end pb-2">
+                        <div class="absolute -top-5 p-1 bg-white rounded-full">
+                            <div class="bg-[#0866FF] rounded-full p-1"><i data-lucide="plus" class="text-white w-6 h-6"></i></div>
+                        </div>
+                        <span class="text-[12px] font-bold">Create story</span>
+                    </div>
+                </div>
+                <div class="w-[112px] h-[200px] rounded-xl relative overflow-hidden cursor-pointer group shadow">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400" class="h-full w-full object-cover transition group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black opacity-10 group-hover:opacity-20 transition"></div>
+                    <div class="absolute top-2 left-2 p-1 bg-[#0866FF] rounded-full border-2 border-[#0866FF]"><img src="https://ui-avatars.com/api/?name=Rana+Jamal" class="w-8 h-8 rounded-full border border-white"></div>
+                    <span class="absolute bottom-2 left-2 text-white text-[12px] font-bold">Rana Jamal</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm w-full max-w-[590px] p-4 mb-4 border border-gray-200">
+                <div class="flex gap-3 items-center border-b pb-3 border-gray-200">
+                    <img src="https://ui-avatars.com/api/?name=Muzammil+Mukhtar&background=random" class="w-10 h-10 rounded-full border">
+                    <div class="bg-[#F0F2F5] hover:bg-[#E4E6E9] transition-colors flex-1 rounded-full px-4 py-2.5 text-[#65676B] text-[17px] cursor-pointer">
+                        What's on your mind, Muzammil?
+                    </div>
+                </div>
+                <div class="flex justify-around pt-2">
+                    <div class="flex items-center gap-2 hover:bg-[#F2F2F2] p-2 px-4 rounded-lg transition flex-1 justify-center cursor-pointer">
+                        <i data-lucide="video" class="text-[#F3425F] w-6 h-6"></i><span class="text-[#65676B] text-[15px] font-semibold">Live video</span>
+                    </div>
+                    <div class="flex items-center gap-2 hover:bg-[#F2F2F2] p-2 px-4 rounded-lg transition flex-1 justify-center cursor-pointer">
+                        <i data-lucide="image" class="text-[#45BD62] w-6 h-6"></i><span class="text-[#65676B] text-[15px] font-semibold">Photo/video</span>
+                    </div>
+                    <div class="flex items-center gap-2 hover:bg-[#F2F2F2] p-2 px-4 rounded-lg transition flex-1 justify-center cursor-pointer">
+                        <i data-lucide="smile" class="text-[#F7B928] w-6 h-6"></i><span class="text-[#65676B] text-[15px] font-semibold">Feeling/activity</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm w-full max-w-[590px] mb-4 border border-gray-200">
+                <div class="p-4 pb-2 flex justify-between items-start">
+                    <div class="flex gap-3">
+                        <img src="https://ui-avatars.com/api/?name=Shadow+Fight" class="w-10 h-10 rounded-lg border">
+                        <div>
+                            <h4 class="font-bold text-[15px] hover:underline cursor-pointer">Shadow Fight 3 (Official Group)</h4>
+                            <div class="flex items-center gap-1 text-[#65676B] text-[13px]">
+                                <span>Abdullahi • Dec 12 • </span><i data-lucide="globe" class="w-3 h-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-1">
+                        <div class="p-2 hover:bg-gray-100 rounded-full cursor-pointer"><i data-lucide="more-horizontal" class="text-[#65676B]"></i></div>
+                        <div class="p-2 hover:bg-gray-100 rounded-full cursor-pointer"><i data-lucide="x" class="text-[#65676B]"></i></div>
+                    </div>
+                </div>
+                <div class="px-4 py-2 text-[15px]">what did u guys get today?</div>
+                <div class="bg-black w-full min-h-[400px] mt-2">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" class="w-full object-contain">
+                </div>
+            </div>
+        </main>
+
+        <aside class="hidden lg:flex flex-col w-[360px] p-2 pt-4">
+            <div class="flex justify-between items-center px-2 mb-2">
+                <span class="font-bold text-[#65676B] text-[17px]">Contacts</span>
+                <div class="flex gap-4 text-[#65676B]">
+                    <i data-lucide="search" class="w-4 h-4 cursor-pointer"></i>
+                    <i data-lucide="more-horizontal" class="w-4 h-4 cursor-pointer"></i>
+                </div>
+            </div>
+            <div class="space-y-1">
+                <div class="flex items-center gap-3 p-2 hover:bg-[#E4E6E9] rounded-lg cursor-pointer transition">
+                    <div class="relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Meta_AI_logo.svg" class="w-9 h-9 p-1 border rounded-full">
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-blue-500 border-2 border-white rounded-full"></div>
+                    </div>
+                    <span class="font-semibold text-[15px]">Meta AI <i data-lucide="badge-check" class="inline w-4 h-4 fill-blue-500 text-white"></i></span>
+                </div>
+                <div class="flex items-center gap-3 p-2 hover:bg-[#E4E6E9] rounded-lg cursor-pointer transition">
+                    <div class="relative">
+                        <img src="https://ui-avatars.com/api/?name=Muhammad+Hassaan" class="w-9 h-9 rounded-full border">
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+                    </div>
+                    <span class="font-semibold text-[15px]">Muhammad Hassaan</span>
+                </div>
+            </div>
+        </aside>
+
+        <div class="fixed bottom-4 right-4 bg-white p-3 shadow-xl rounded-full border hover:bg-gray-100 cursor-pointer transition">
+            <i data-lucide="square-pen" class="w-7 h-7"></i>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

