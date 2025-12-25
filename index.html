@@ -11,7 +11,16 @@
     </style>
 </head>
 <body class="flex flex-col items-center">
-
+<div class="card" id="loadingCard"> 
+ <div class="loader">
+  <p>loading</p>
+  <div class="words">
+ <span class="word">Welcome</span>
+ <span class="word">Chatapp</span>
+ <span class="word">switches</span>
+ </div>
+ </div>
+</div>
     <header class="py-8">
         <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4l_v2btLpXY.svg" alt="Facebook" class="w-40">
     </header>
@@ -23,7 +32,7 @@
         </div>
 
         <div class="p-4">
-            <form onsubmit="signUp()" class="space-y-3">
+            <form onsubmit="signUp(event)" class="space-y-3">
                 <div class="flex gap-3">
                     <input type="text" id="firstName" placeholder="First name" class="w-full p-2 bg-[#f5f6f7] border border-gray-300 rounded-md text-[15px] focus:ring-1 focus:ring-blue-500 outline-none">
                     <input type="text" id="lastName" placeholder="Surname" class="w-full p-2 bg-[#f5f6f7] border border-gray-300 rounded-md text-[15px] focus:ring-1 focus:ring-blue-500 outline-none">
@@ -36,13 +45,13 @@
                 <div>
                     <label class="text-[12px] text-[#606770] font-semibold">Date of birth</label>
                     <div class="flex gap-3 mt-1">
-                        <select class="flex-1 p-2 border border-gray-300 rounded-md text-[15px]">
+                        <select id="dobDay" class="flex-1 p-2 border border-gray-300 rounded-md text-[15px]">
                             <option>1</option><option selected>20</option>
                         </select>
-                        <select class="flex-1 p-2 border border-gray-300 rounded-md text-[15px]">
+                        <select id="dobMonth" class="flex-1 p-2 border border-gray-300 rounded-md text-[15px]">
                             <option>Jan</option><option selected>Dec</option>
                         </select>
-                        <select class="flex-1 p-2 border border-gray-300 rounded-md text-[15px]">
+                        <select id="dobYear" class="flex-1 p-2 border border-gray-300 rounded-md text-[15px]">
                             <option>2025</option><option selected>2000</option>
                         </select>
                     </div>
@@ -53,11 +62,11 @@
                     <div class="flex gap-3 mt-1">
                         <label class="flex justify-between items-center flex-1 p-2 border border-gray-300 rounded-md cursor-pointer">
                             <span class="text-[15px]">Female</span>
-                            <input type="radio" name="gender" class="w-4 h-4">
+                            <input value="Female" type="radio" name="gender" class="w-4 h-4">
                         </label>
                         <label class="flex justify-between items-center flex-1 p-2 border border-gray-300 rounded-md cursor-pointer">
                             <span class="text-[15px]">Male</span>
-                            <input type="radio" name="gender" class="w-4 h-4">
+                            <input type="radio" value="Male" name="gender" class="w-4 h-4">
                         </label>
                     </div>
                 </div>
@@ -84,5 +93,12 @@
     </main>
 <script type="module" src="app.js"></script>
 <script type="module" src="config.js"></script>
+   <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
 </body>
 </html>

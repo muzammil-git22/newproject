@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Requests | My App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Smooth scrolling for the request list */
+        body {
+            background-color: #F0F2F5;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mains" class="w-full min-h-screen flex flex-col">
+        <div class="flex flex-col items-center justify-center h-screen gap-4">
+            <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#0866FF]"></div>
+            <p class="text-gray-500 font-medium">Loading your requests...</p>
+        </div>
+    </div>
+
+    <script type="module" src="config.js"></script>
+    <script type="module" src="friendRequest.js"></script>
+
+    <script>
+        // Lucide icons ko global initialization ke liye agar zarurat pare
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>

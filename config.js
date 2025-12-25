@@ -1,8 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
-import {  getFirestore, setDoc, deleteField, updateDoc, getDocs, doc, getDoc, collection, query, where, arrayUnion, arrayRemove 
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"; 
+import {  getFirestore, setDoc,orderBy, onSnapshot, deleteField, updateDoc, getDocs, doc, getDoc, collection, query, where, arrayUnion, arrayRemove ,addDoc, serverTimestamp} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"; 
   const firebaseConfig = {
      apiKey: "AIzaSyAJkUFC-_kJ9z2GlGPlZTjG-6UHI7w7QOI",
     authDomain: "facebook-c-5fc57.firebaseapp.com",
@@ -37,4 +36,8 @@ export {
     updateDoc,
     deleteField,
     arrayRemove,
+    addDoc,
+    orderBy,
+     serverTimestamp,
+     onSnapshot,
 };

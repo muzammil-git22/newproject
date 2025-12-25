@@ -22,11 +22,11 @@
 
         <div class="w-full max-w-[396px]">
             <div class="bg-white p-4 rounded-lg fb-card-shadow">
-                <form onsubmit="siginIn()" class="space-y-4">
-                    <input type="text" placeholder="Email address or phone number" 
+                <form onsubmit="signIn(event)" class="space-y-4">
+                    <input type="text" id="email" placeholder="Email address or phone number" 
                         class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#0866FF] focus:ring-1 focus:ring-[#0866FF] text-[17px]">
                     
-                    <input type="password" placeholder="Password" 
+                    <input type="password" id="password" placeholder="Password" 
                         class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-[#0866FF] focus:ring-1 focus:ring-[#0866FF] text-[17px]">
                     
                     <button class="w-full bg-[#0866FF] text-white text-[20px] font-bold py-2.5 rounded-md hover:bg-[#055ada] transition">
@@ -40,7 +40,7 @@
                     <hr class="my-4 border-gray-200">
                     
                     <div class="text-center pt-2">
-                        <a href="signup.html" class="inline-block bg-[#42b72a] text-white text-[17px] font-bold px-4 py-3 rounded-md hover:bg-[#36a420] transition">
+                        <a href="index.html" class="inline-block bg-[#42b72a] text-white text-[17px] font-bold px-4 py-3 rounded-md hover:bg-[#36a420] transition">
                             Create new account
                         </a>
                     </div>
@@ -51,7 +51,15 @@
             </p>
         </div>
     </main>
-<script type="module" src="app.js"></script>
+       <script>
+        // Lucide icons ko global initialization ke liye agar zarurat pare
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+<script type="module" src="sigin.js"></script>
 <script type="module" src="config.js"></script>
 </body>
 </html>
