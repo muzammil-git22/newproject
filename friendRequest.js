@@ -59,7 +59,7 @@ async function currentUsersData(currentUserId) {
             </div>
 
             <nav class="flex-1 px-2 space-y-1 overflow-y-auto">
-                <a href="#" class="flex items-center justify-between p-3 hover:bg-gray-100  rounded-lg group">
+                <a href="./friend.html" class="flex items-center justify-between p-3 hover:bg-gray-100  rounded-lg group">
                     <div class="flex items-center gap-3">
                         <div class="p-2 bg-gray-200  rounded-full ">
                             <i data-lucide="users" class="w-5 h-5 "></i>
